@@ -59,3 +59,5 @@ This is how you can clone the project:
 git clone <url>
 ```
 
+conflicted message 1
+
