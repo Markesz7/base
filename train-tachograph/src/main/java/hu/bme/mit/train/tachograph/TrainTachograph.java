@@ -18,4 +18,9 @@ public class TrainTachograph {
     {
         tachograph.put(currentTime, joystickPos, speed);
     }
+
+    public int getSize()
+    {
+        return tachograph.size();
+    }
 }
