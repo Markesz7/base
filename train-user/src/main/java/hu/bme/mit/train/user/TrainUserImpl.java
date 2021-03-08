@@ -13,7 +13,13 @@ public class TrainUserImpl implements TrainUser {
 	}
 
 	@Override
-	public boolean getAlarmFlag() {
+	public boolean getAlarmFlag()
+	{
+		if(controller.isSpeedNotCorrect())
+		{
+			System.out.println("The speed is higher than the speedlimit!");
+			return true;
+		}
 		return false;
 	}
 

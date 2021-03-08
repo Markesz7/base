@@ -42,6 +42,12 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	@Override
+	public boolean isSpeedNotCorrect()
+	{
+		return referenceSpeed > speedLimit;
+	}
+
+	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
 	}
