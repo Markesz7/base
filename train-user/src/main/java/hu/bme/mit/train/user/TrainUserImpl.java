@@ -10,7 +10,7 @@ public class TrainUserImpl implements TrainUser {
 
 	private TrainController controller;
 	private int joystickPosition;
-	private boolean timer_exists = false;
+	private boolean timerExists = false;
 	private Timer timer;
 
 	public TrainUserImpl(TrainController controller) {
@@ -40,7 +40,7 @@ public class TrainUserImpl implements TrainUser {
 		this.joystickPosition = joystickPosition;
 		controller.setJoystickPosition(joystickPosition);
 
-		if(!timer_exists)
+		if(!timerExists)
 		{
 			TimerTask tt = new TimerTask() {
 				@Override
@@ -49,7 +49,7 @@ public class TrainUserImpl implements TrainUser {
 				}
 			};
 			timer.scheduleAtFixedRate(tt, 0, 1000);
-			timer_exists = true;
+			timerExists = true;
 		}
 	}
 }
