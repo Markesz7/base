@@ -11,9 +11,11 @@ public class TrainUserImpl implements TrainUser {
 	private TrainController controller;
 	private int joystickPosition;
 	private boolean timer_exists = false;
+	private Timer timer;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
+		timer = new Timer();
 	}
 
 	@Override
@@ -40,7 +42,6 @@ public class TrainUserImpl implements TrainUser {
 
 		if(!timer_exists)
 		{
-			Timer timer = new Timer();
 			TimerTask tt = new TimerTask() {
 				@Override
 				public void run() {
