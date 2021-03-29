@@ -12,6 +12,7 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 	private boolean timerExists = false;
 	private Timer timer;
+	private boolean alarmState;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
@@ -51,5 +52,15 @@ public class TrainUserImpl implements TrainUser {
 			timer.scheduleAtFixedRate(tt, 0, 1000);
 			timerExists = true;
 		}
+	}
+
+	@Override
+	public boolean getAlarmState() {
+		return alarmState;
+	}
+
+	@Override
+	public void setAlarmState(boolean alarmState) {
+		this.alarmState = alarmState;
 	}
 }
