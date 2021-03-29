@@ -12,7 +12,7 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 	private boolean timerExists = false;
 	private Timer timer;
-	private boolean alarmState;
+	private boolean alarmState = false;
 
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
